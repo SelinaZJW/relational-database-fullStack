@@ -2,8 +2,8 @@ POST http://localhost:3001/api/blogs HTTP/1.1
 Content-Type: application/json
 
 {
-    "author": "Mary",
+    "author": "Maria",
     "url": "www.flower.com",
-    "title": "Spring is Here",
-    "likes": 9
+    "title": "Spring is Here OR NOT",
+    "likes": 2
 }
