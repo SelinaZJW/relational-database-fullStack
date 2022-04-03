@@ -9,11 +9,11 @@ Content-Type: application/json
 ###
 POST http://localhost:3001/api/blogs HTTP/1.1
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmtAdHdhaW4uY29tIiwiaWQiOjMsImlhdCI6MTY0ODc0OTk4NH0.v1VDN7rIzDvX55viIHn2111vglm3ep0ajPsdp4gDmmE
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmtAdHdhaW4uY29tIiwiaWQiOjMsImlhdCI6MTY0ODc1MDc3OH0.EUGOP89bOC2ZY6kr-kLAJWR4QNMUYsuuCsg2uSaFUoo
 
 {
     "author": "Tom Sawyer",
-    "url": "www.cabin.com",
-    "title": "Uncle Uncle",
-    "likes": 10
+    "url": "www.tritritri.com",
+    "title": "Another",
+    "likes": 8
 }
