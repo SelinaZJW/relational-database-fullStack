@@ -48,7 +48,8 @@ module.exports = {
           isEmail: true
         }
       },
-      passwordHash: {
+      //in migration, columns created in snake forms, in model, camel case
+      password_hash: {
         type: DataTypes.STRING,
         allowNull: false,
       },

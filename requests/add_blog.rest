@@ -13,7 +13,16 @@ POST http://localhost:3001/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "selina@zheng.com",
-    "name": "Selina Zheng",
+    "username": "mark@twain.com",
+    "name": "Mark Twain",
     "password": "password"
+}
+
+###
+POST http://localhost:3001/api/readinglists HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "blogId": 7
 }
