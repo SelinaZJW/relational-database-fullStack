@@ -12,3 +12,12 @@ Content-Type: application/json
 {
     "username": "selina@zheng.com"
 }
+
+###
+PUT http://localhost:3001/api/readinglists/1 HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbGluYUB6aGVuZy5jb20iLCJpZCI6MSwiaWF0IjoxNjQ5MTc4NzI2fQ.04lzpElbJgTleBvRPz3ff5LsAp9p27QYvRfq57uCnsY
+
+{
+    "status": "read"
+}

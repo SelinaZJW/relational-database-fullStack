@@ -2,19 +2,26 @@ const router = require('express').Router()
 const jwt = require('jsonwebtoken')
 const { Op } = require('sequelize')
 
-const { Blog, User } = require('../models')
+const { Blog, User, SessionToken } = require('../models')
 const { SECRET } = require('../utils/config')
 
-const tokenExtractor = (req, res, next) => {
+const tokenExtractor = async (req, res, next) => {
   const authorization = req.get('authorization')
-  console.log(authorization)
-  if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+  const token = authorization.substring(7)
+  const tokenExist = await SessionToken.findOne({ where: { token: token }})    //dont forget ASYNC/AWAIT for all queries
+  console.log(tokenExist)
+
+  if (!tokenExist) {
+    res.status(401).json({ error: 'session timed out' })
+  } 
+  if (authorization && authorization.toLowerCase().startsWith('bearer ') && tokenExist) {
     try {
-      req.decodedToken = jwt.verify(authorization.substring(7), SECRET)
+      req.decodedToken = jwt.verify(token, SECRET)
     } catch{
       res.status(401).json({ error: 'token invalid' })
     }
-  }  else {
+  } 
+  else {
     res.status(401).json({ error: 'token missing' })
   }
 

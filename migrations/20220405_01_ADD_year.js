@@ -6,7 +6,7 @@ module.exports = {
       type: DataTypes.INTEGER,
       validate: {
         min: 1991,
-        max: 2022
+        max: new Date().getFullYear()
         //max is current year
         // isNotGreaterThanCurrentYear(value) {
         //   if (value > )

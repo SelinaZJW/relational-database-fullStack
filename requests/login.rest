@@ -7,9 +7,23 @@ Content-Type: application/json
 }
 
 ###
+DELETE http://localhost:3001/api/logout HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbGluYUB6aGVuZy5jb20iLCJpZCI6MSwiaWF0IjoxNjQ5MjA1MjA3fQ._4la_ujkHK9DMyL7Q-VweRhRodRZNWziqBJVOmxsdx8
+
+
+###
+POST http://localhost:3001/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test@user.com",
+    "password": "password"
+}
+
+###
 POST http://localhost:3001/api/blogs HTTP/1.1
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbGluYUB6aGVuZy5jb20iLCJpZCI6MSwiaWF0IjoxNjQ5MTc4NzI2fQ.04lzpElbJgTleBvRPz3ff5LsAp9p27QYvRfq57uCnsY
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbGluYUB6aGVuZy5jb20iLCJpZCI6MSwiaWF0IjoxNjQ5MjA1MjA3fQ._4la_ujkHK9DMyL7Q-VweRhRodRZNWziqBJVOmxsdx8
 
 {
     "author": "Anna",
@@ -21,7 +35,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlb
 ###
 PUT http://localhost:3001/api/readinglists/1 HTTP/1.1
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbGluYUB6aGVuZy5jb20iLCJpZCI6MSwiaWF0IjoxNjQ5MTgyODI0fQ.HxKU3MzXqp6LE8MG3iglxbSeCpA5YrSJ97CtlFxgZ2s
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlbGluYUB6aGVuZy5jb20iLCJpZCI6MSwiaWF0IjoxNjQ5MjA1MjA3fQ._4la_ujkHK9DMyL7Q-VweRhRodRZNWziqBJVOmxsdx8
 
 {
     "status": "read"
